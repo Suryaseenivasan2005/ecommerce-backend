@@ -21,9 +21,11 @@ app.get('/health', (_req, res) => {
 });
 
 // ─── API Routes ──────────────────────────────────────────────────────────────
-// TODO: Mount your feature routers here as you build them, for example:
 // const productRoutes = require('./routes/product.routes');
 // app.use('/api/v1/products', productRoutes);
+
+const userRoutes = require('./routes/user.routes');
+app.use('/api/v1/users', userRoutes);
 
 // ─── 404 & Error Handlers (must be last) ────────────────────────────────────
 app.use(notFound);
